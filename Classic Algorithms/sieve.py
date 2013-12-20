@@ -4,6 +4,7 @@ find the prime under threshold (default to 1000)
 """
 import math
 
+
 def sievePrime(n=1000):
     lst = range(0, n + 1)
     lst[1] = 0
