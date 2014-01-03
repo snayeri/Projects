@@ -19,17 +19,13 @@ def mergesort(lst):
     # random to avoid dead loop for special sequence
     r = lst[random.randint(0, len(lst) - 1)]
     left, mid, right = [], [], []
-
-    def group(x):
-    # Sorry for this group func
-        if x < r:
-            return 0
-        elif x == r:
-            return 1
-        else:
-            return 2
     for i in lst:
-        (left, mid, right)[group(i)].append(i)
+        if x < r:
+            left.append(i)
+        elif x == r:
+            mid.append(i)
+        else:
+            right.append(i)
     left = mergesort(left)
     left.extend(mid)
     right = mergesort(right)
