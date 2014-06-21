@@ -20,9 +20,9 @@ def mergesort(lst):
     r = lst[random.randint(0, len(lst) - 1)]
     left, mid, right = [], [], []
     for i in lst:
-        if x < r:
+        if i < r:
             left.append(i)
-        elif x == r:
+        elif i == r:
             mid.append(i)
         else:
             right.append(i)
